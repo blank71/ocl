@@ -1,0 +1,9 @@
+(executable
+ (name test)
+ (libraries ocl alcotest))
+
+(rule
+ (alias runtest)
+ (deps test.exe)
+ (action
+  (run %{deps})))

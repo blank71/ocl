@@ -1,0 +1,13 @@
+(library
+ (name ocl)
+ (libraries menhirLib)
+ (modules syntax eval parser lexer))
+
+(menhir
+ (modules parser))
+
+(rule
+ (targets lexer.ml)
+ (deps lexer.mll)
+ (action
+  (run ocamllex %{deps})))
