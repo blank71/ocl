@@ -20,8 +20,7 @@ open Syntax
 
 %token EOF
 
-%type <Syntax.expr> main
-%start main
+%start <Syntax.expr> main
 
 %%
 
